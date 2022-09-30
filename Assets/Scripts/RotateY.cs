@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveObjectRB02 : MonoBehaviour
+public class RotateY : MonoBehaviour
 {
+
     Rigidbody rigidbody;
-    [SerializeField] Vector3 moveDirection;
+    Vector3 unitVecY;
     // Start is called before the first frame update
     void Start()
     {
+        unitVecY = new Vector3(0, 25, 0); // Don't change this!
         rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(moveDirection, ForceMode.Force);
+        rigidbody.AddTorque(unitVecY);
     }
 }

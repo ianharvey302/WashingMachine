@@ -13,7 +13,7 @@ public class MoveObjectRB04 : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
 
         // Don't move this line or add any new values (such as coefficients)!
-        rigidbody.AddForce(moveDirection, ForceMode.Force);
+        rigidbody.AddForce(moveDirection, ForceMode.Impulse);
     }
 
     // Update is called once per frame
